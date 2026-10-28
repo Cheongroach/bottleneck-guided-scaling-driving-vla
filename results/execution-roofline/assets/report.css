@@ -1,0 +1,46 @@
+@font-face{font-family:InstrumentSans;src:url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:InstrumentSans;src:url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:WenQuanYi;src:url('./_shared/fonts/WenQuanYi-subset.ttf') format('truetype');font-display:swap}
+@font-face{font-family:IBMPlexMono;src:url('./_shared/fonts/IBMPlexMono-Regular.ttf') format('truetype');font-display:swap}
+:root{--bg:#f5f4ef;--bg2:#ffffff;--ink:#173039;--muted:#52666c;--rule:#d3ddd9;--accent:#137e80;--accent2:#ca6742;--font:InstrumentSans,WenQuanYi,system-ui,sans-serif;--font-mono:IBMPlexMono,WenQuanYi,monospace;--max:1060px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:17px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.85;padding:54px 28px}
+.page{max-width:var(--max);margin:auto}
+header{padding:22px 0 36px;border-bottom:2px solid var(--ink)}
+.eyebrow{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.16em;margin:0 0 18px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.14;letter-spacing:-.025em;margin:0 0 24px;font-weight:700}
+.subtitle{font-size:22px;margin:0 0 8px}.meta{font-size:14px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:26px 0}
+.facts>div{border-top:1px solid var(--rule);padding-top:16px}
+.facts strong{display:block;font-size:32px;line-height:1.3;color:var(--accent)}
+.facts span{display:block;font-size:14px;margin-top:5px;color:var(--muted)}
+.reading{margin:0 0 20px;max-width:820px}.downloads{display:flex;flex-wrap:wrap;gap:18px;font-size:14px}
+a{color:var(--accent);text-underline-offset:4px;overflow-wrap:anywhere}
+a:hover{color:var(--accent2)}
+nav{display:flex;gap:7px 16px;flex-wrap:wrap;font-size:13px;padding:18px 0 22px;margin-bottom:35px;border-bottom:1px solid var(--rule)}
+nav a{text-decoration:none}
+h2{font-size:27px;line-height:1.4;margin:64px 0 24px;padding-top:18px;border-top:1px solid var(--rule);scroll-margin-top:24px}
+h3{font-size:20px;margin:32px 0 12px}
+p{margin:18px 0}strong{font-weight:700}li{margin:8px 0}
+code{font-family:var(--font-mono);font-size:.84em;background:var(--bg2);padding:2px 5px;border-radius:3px;overflow-wrap:anywhere}
+pre{background:var(--bg2);border-left:3px solid var(--accent);padding:20px 22px;font-size:14px;line-height:1.8;overflow:auto}
+pre code{font-size:inherit;padding:0;background:var(--bg2);overflow-wrap:normal}
+.table-wrap{overflow-x:auto;overflow-y:auto;max-height:600px;margin:26px 0;border:1px solid var(--rule);background:var(--bg2)}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.65}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{color:var(--ink);background:var(--bg);font-weight:700;white-space:nowrap}
+td:first-child{font-weight:700}
+tr:last-child td{border-bottom:0}
+.chart-figure{margin:34px 0;padding:24px 24px 18px;background:var(--bg2);border:1px solid var(--rule)}
+.chart-figure figcaption{font-size:17px;font-weight:700;margin:0 0 20px}
+.chart-container{width:100%;height:410px}
+#chart-timeline32{height:430px}#chart-roofline{height:470px}
+.figure-note{font-size:13px;line-height:1.75;color:var(--muted);margin:18px 0 4px}
+.figure-download{font-size:12px}
+noscript img{max-width:100%}
+footer{font-size:13px;color:var(--muted);padding:24px 0;margin-top:54px;border-top:1px solid var(--rule)}
+#s11~ol{font-size:14px}
+#s11~ol a{word-break:break-all}
+@media(max-width:768px){body{padding:24px 16px}.facts{gap:12px}.facts strong{font-size:25px}.facts span{font-size:12px}.subtitle{font-size:18px}h2{font-size:23px;margin-top:48px}.chart-figure{padding:18px 10px}.chart-container{height:390px}table{min-width:700px}pre{padding:14px;font-size:12px}nav{font-size:12px;gap:8px 12px}#chart-roofline{height:420px}}
+@media print{body{background:var(--bg2);padding:0;font-size:11pt}nav,.downloads,.figure-download{display:none}header{break-after:page}h2{break-before:page}.chart-figure,.table-wrap{break-inside:avoid}a{color:var(--ink)}.table-wrap{max-height:none;overflow:visible}pre{white-space:pre-wrap}}
